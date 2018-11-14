@@ -1,0 +1,24 @@
+{
+    "name": "jcobhams/ngbanks",
+    "description": "PHP Implementation for Lightweight Zero dependency npm package to get list of banks in Nigeria (Recognized by CBN)",
+    "keywords": ["Nigerian", "Fintech", "banks", "money", "cbn"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Cobhams",
+            "email": "jcobhams@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.3"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "jcobhams\\NgBanks\\": "src/"
+        }
+    }
+}
