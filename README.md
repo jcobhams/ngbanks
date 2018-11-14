@@ -1,15 +1,42 @@
-Composer Library Template
-=========================
+## NgBanks
+PHP implementation of [ng-banks](https://github.com/BolajiOlajide/ng-banks).
 
-If you are trying to create a new PHP Composer library, whether it will be going to submitted to packagist.org or just in your Github account, this template of files will surely help you make the process a lot easier and faster.
+###Installation
+Available for installation on packagist using composer.
+```
+composer require jcobhams/ngbanks
+```
 
-Features
---------
+### Usage
+After installation and and `require`ing `vendor/autoload.php` file in your project,
 
-* PSR-4 autoloading compliant structure
-* Unit-Testing with PHPUnit
-* Comprehensive Guides and tutorial
-* Easy to use to any framework or even a plain php file
+```php
+use jcobhams\NgBanks\NgBanks;
+.
+.
+.
+$this->ngbanks = new NgBanks();
+
+//Get All Banks
+$this->ngbanks->getBanks();
+
+//Get Access Bank
+$this->ngbanks->getBank('044');
+
+//Add New Bank
+$this->ngbanks->addBank('Cobhams Savings and Loans', '007', 'CSL', '*007#')
+
+```
+
+The package contains 3 methods:
+
+* `getBanks()`: this method is used to retrieve all the banks in the system.
+
+* `getBank(param)`: this method is used to retrieve a particular bank based on the parameter supplied. The parameter can either the be the slug of the bank or the bank code. For slugs or code that don't exist, this method returns None.
+
+* `addBank($name, $code, $slug, $ussd_code)`: this method will extend the current list of banks on the fly. Returns a array with the new bank just added or `throws exception` if bank `code` or `slug` already exists.
 
 
-I encourage that you put more information on this readme file instead of leaving it as is. See [How to make a README file](http://www.darwinbiler.com/designing-and-making-the-readme-file-for-your-github-repository/) for more info.
+### CONTRIBUTORS
+
+This package is authored by Joseph Cobhams.

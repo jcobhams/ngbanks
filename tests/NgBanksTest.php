@@ -1,12 +1,13 @@
 <?php 
 use PHPUnit\Framework\TestCase;
+use jcobhams\NgBanks\NgBanks;
 
 class NgBanksTest extends TestCase
 {
 	public function setUp()
 	{
 		parent::setUp();
-		$this->ngbanks = new \jcobhams\NgBanks\NgBanks();
+		$this->ngbanks = new NgBanks();
 	}
 
 	public function testInitialCountOfBanksMatch()
